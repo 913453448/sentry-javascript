@@ -572,4 +572,20 @@ describe('safeNormalize()', () => {
       reason: '[Circular ~]',
     });
   });
+
+  test('normalizes value on every iteration of decycle and takes care of things like Reacts SyntheticEvents', () => {
+    const obj = {
+      foo: {
+        nativeEvent: 'wat',
+        preventDefault: 'wat',
+        stopPropagation: 'wat',
+      },
+      baz: NaN,
+    };
+    const result = safeNormalize(obj);
+    expect(result).toEqual({
+      foo: '[SyntheticEvent]',
+      baz: '[NaN]',
+    });
+  });
 });
