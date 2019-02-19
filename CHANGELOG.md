@@ -29,7 +29,8 @@ since we removed some methods from the public API and removed some classes from 
 - **breaking** [utils] ref: Rename `limitObjectDepthToSize` to `normalizeToSize` and rewrite its internals
 - **breaking** [utils] ref: Rename `safeNormalize` to `normalize` and rewrite its internals
 - **breaking** [utils] ref: Remove `serialize`, `deserialize`, `clone` and `serializeObject` functions
-- **breaking** [utils] ref: Rewrite normalization functions by removing most of them and leaving just `normalize` and `normalizeToSize`
+- **breaking** [utils] ref: Rewrite normalization functions by removing most of them and leaving just `normalize` and
+  `normalizeToSize`
 
 ## 4.6.2
 
